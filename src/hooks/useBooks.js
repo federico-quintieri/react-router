@@ -72,8 +72,9 @@ export function useBooks() {
 
   const createBook = async (bookData) => {
     try {
-      await apiService.createBook(bookData);
-      refetch();
+      const createdBook = await apiService.createBook(bookData);
+      refetch(); // Ricarica i dati per includere il nuovo libro
+      return createdBook;
     } catch (error) {
       console.error("Error creating book:", error);
       throw error;
