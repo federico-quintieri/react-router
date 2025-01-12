@@ -19,6 +19,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/ChiSiamo" element={<ChiSiamo />} />
             <Route path="/PostList" element={<PostList />} />
+            {/* Faccio una rotta dinamica */}
             <Route path="/PostList/:id" element={<PostDetail />}/>
           </Route>
         </Routes>
